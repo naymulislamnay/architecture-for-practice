@@ -10,6 +10,13 @@
 
 
 /* Shared styles */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
 .primary-bg-color{
     background-color: rgba(255, 144, 14, 0.1);
 }
@@ -23,6 +30,17 @@ h1{
 .primary-heading{
     font-size: 2.81rem;
     font-weight: bold;
+}
+
+
+.primary-btn{
+    background-color: rgba(255, 144, 14, 1);
+    font-size: 1.25rem;
+    font-weight: 600px;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    padding: 20px 25px;
 }
 
 
@@ -40,11 +58,14 @@ h1{
 
 /* nav bar */
 
+header{
+    padding: 50px 230px 45px;
+}
+
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 50px 230px 0;
 }
 
 
@@ -62,20 +83,69 @@ nav ul li a{
     font-size: 1.125rem;
 }
 
+/* banner style */
+
+.banner-heading{
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 102px;
+}
+
+.banner-description{
+    max-width: 868px;
+    text-align: center;
+    margin: 25px auto 0;
+}
+
+.banner-content button{
+    display: flex;
+    margin: 32px auto 0;
+}
+
+.banner-content img{
+    max-width: 100%;
+    display: flex;
+    margin: 50px auto 0;
+}
+
+/* css For responsive */
 
 @media (max-width: 576px) {
-    nav{
-        margin: 0;
+
+    /* responsive nav-bar style */
+    header{
+        padding: 20px 10px 20px;
     }
     .primary-heading{
         font-size: 1.5rem;
     }
 
     nav ul{
-        gap: 5px;
+        gap: 10px;
     }
 
     nav ul li a{
         font-size: 0.8rem;
+    }
+
+
+    /* responsive banner style */
+    .banner-heading{
+        font-size: 2rem;
+        margin-top: 60px;
+    }
+
+    .banner-description{
+        font-size: 0.8rem;
+    }
+
+    .primary-btn{
+    font-size: 1rem;
+    padding: 10px 20px;
+    }
+
+    .banner-content img{
+    margin: 25px auto 0;
     }
 }
