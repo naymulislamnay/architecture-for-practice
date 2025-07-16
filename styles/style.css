@@ -2,38 +2,43 @@
 
 
 .work-sans-regular {
-  font-family: "Work Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
 /* Shared styles */
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
-.primary-bg-color{
+
+.primary-bg-color {
     background-color: rgba(255, 144, 14, 0.1);
 }
 
-h1{
+h1 {
     margin: 0;
     padding: 0;
 }
 
 
-.primary-heading{
+.primary-heading {
     font-size: 2.81rem;
     font-weight: bold;
 }
 
 
-.primary-btn{
+.primary-btn {
     background-color: rgba(255, 144, 14, 1);
     font-size: 1.25rem;
     font-weight: 600px;
@@ -44,69 +49,115 @@ h1{
 }
 
 
-.dark-1{
+.description {
+    line-height: 26px;
+    color: #727272;
+}
+
+
+.dark-1 {
     color: #131313;
 }
 
-.dark-2{
+.dark-2 {
     color: #424242;
 }
 
-.dark-3{
+.dark-3 {
     color: #727272;
 }
 
 /* nav bar */
 
-header{
+header {
     padding: 50px 230px 45px;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 
-nav ul{
+nav ul {
     display: flex;
     gap: 20px;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     font-size: 1.125rem;
 }
 
 /* banner style */
 
-.banner-heading{
+.banner-heading {
     font-size: 4rem;
     font-weight: bold;
     text-align: center;
     margin-top: 102px;
 }
 
-.banner-description{
+
+.banner-description {
     max-width: 868px;
     text-align: center;
     margin: 25px auto 0;
+    color: #727272;
 }
 
-.banner-content button{
+.banner-content button {
     display: flex;
     margin: 32px auto 0;
 }
 
-.banner-content img{
+.banner-content img {
     max-width: 100%;
     display: flex;
     margin: 50px auto 0;
+}
+
+/* css for features section */
+
+.features {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 85px;
+    gap: 73px;
+}
+
+.left-feature {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.left-feature img {
+    border-radius: 8px;
+}
+
+
+.right-feature h1 {
+    margin-bottom: 24px;
+}
+
+#quick-li {
+    font-weight: 500;
+}
+
+#feat {
+    color: #FF900E;
+}
+
+
+.right-feature button {
+    margin-top: 32px;
 }
 
 /* css For responsive */
@@ -114,38 +165,81 @@ nav ul li a{
 @media (max-width: 576px) {
 
     /* responsive nav-bar style */
-    header{
+    header {
         padding: 20px 10px 20px;
     }
-    .primary-heading{
+
+    .primary-heading {
         font-size: 1.5rem;
     }
 
-    nav ul{
+    nav ul {
         gap: 10px;
     }
 
-    nav ul li a{
+    nav ul li a {
         font-size: 0.8rem;
     }
 
 
     /* responsive banner style */
-    .banner-heading{
+    .banner-heading {
         font-size: 2rem;
         margin-top: 60px;
     }
 
-    .banner-description{
+    .description {
+        line-height: normal;
+    }
+
+    .banner-description {
+        line-height: normal;
         font-size: 0.8rem;
     }
 
-    .primary-btn{
-    font-size: 1rem;
-    padding: 10px 20px;
+    .primary-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 
-    .banner-content img{
-    margin: 25px auto 0;
+    .banner-content img {
+        margin: 25px auto 0;
+    }
+
+    /* responsive feature style */
+
+
+    .features {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 25px;
+    }
+
+    .left-feature {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+        justify-items: center;
+    }
+
+
+    .right-feature {
+        justify-items: center;
+    }
+
+    .right-feature h1 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #quick-li {
+        font-weight: 500;
+    }
+
+    #feat {
+        color: #FF900E;
+    }
+
+
+    .right-feature button {
+        margin-top: 32px;
     }
 }
